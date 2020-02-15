@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import logo from '../images/bg-login.png'
+import logo from '../images/bg-login.png'
 
 class Login extends React.Component {
     render() {
