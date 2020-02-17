@@ -38,7 +38,7 @@ export const Navbar = ({ }) => {
       </li>
     </ul>
     <div class="dropdown">
-  <button class="btn  dropdown-toggle rounded-circle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn  dropdown-toggle borderbutton espacer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <span>
   <i class="fa fa-user-o fa-3x " aria-hidden="true"></i>
 
@@ -53,18 +53,12 @@ export const Navbar = ({ }) => {
 
 </div>
 <div>
-<div class="dropdown">
-  <button class="btn  dropdown-toggle rounded-circle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div>
+  <button class="btn borderbutton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <span>
   <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
   </span>
   </button> 
-  
-  <div class="dropdown-menu listRight" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Profil</a>
-    <a class="dropdown-item" href="#">Historique Commandes</a>
-    <a class="dropdown-item" href="#">Logout</a>
-  </div>
 
 </div>
 

@@ -32,11 +32,14 @@
 	margin: 0 0 0 70px !important;
 }
 .espacer{
-	margin-right: 100px !important;
+	margin-right: 10px !important;
 }
 .listRight {
     left: auto !important;
     right: 0 !important;
+}
+.borderbutton:focus{
+	box-shadow:0 0 0 0 !important;
 }
 
 /*//////////////////////////////////////////////////////////////////
