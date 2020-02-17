@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-
 import logo from "../images/bg-login.png";
 import { TextInput } from "../components/TextInput";
 
-const Login = () => {
+
+const Login = ({history}) => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+
 
   const handleIdChange = event => {
     setId(event.target.value);
@@ -15,7 +16,7 @@ const Login = () => {
   };
 
   const handleSubmit = () => {
-    if (id === "admin" && password === "admin") alert("USER LOGGED IN");
+    if (id === "admin" && password === "admin") history.push('/home');
     else alert("WRONG PASSWORD");
   };
 

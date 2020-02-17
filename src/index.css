@@ -4,6 +4,24 @@
   height: 100%;
 }
 
+.siteheader{
+	background-color: #16192A;
+	height: 100px;
+	width: 100%;
+	display:block
+}
+.TTLogo{
+	width: 120px;
+	height: 50px;
+
+}
+.iconeuser{
+	font-size:24px;
+}
+.navbarText{
+	color:#ffffff !important;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
