@@ -6,6 +6,7 @@ import "./index.css";
 import "./bootstrap.min.css"
 import {Route,Switch,BrowserRouter} from 'react-router-dom';
 import AppRouter from "./containers/AppRouter";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 
 const App = () => {

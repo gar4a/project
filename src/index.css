@@ -3,12 +3,15 @@
   width: 100%;
   height: 100%;
 }
-
+.title{
+	font-family: Montserrat-Bold !important;
+}
 .siteheader{
-	background-color: #16192A;
-	height: 100px;
-	width: 100%;
-	display:block
+	background-color: #26828E !important;
+}
+.navbarcolor{
+	color: #ffffff !important;
+	font-size: 24px;
 }
 .TTLogo{
 	width: 120px;
@@ -17,9 +20,23 @@
 }
 .iconeuser{
 	font-size:24px;
+	width: 100px !important;
+	height: 100px !important;
+	size: 100px;
 }
 .navbarText{
 	color:#ffffff !important;
+}
+
+.espacel{
+	margin: 0 0 0 70px !important;
+}
+.espacer{
+	margin-right: 100px !important;
+}
+.listRight {
+    left: auto !important;
+    right: 0 !important;
 }
 
 /*//////////////////////////////////////////////////////////////////
