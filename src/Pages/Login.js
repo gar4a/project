@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import logo from "../images/bg-login.png";
 import { TextInput } from "../components/TextInput";
 
@@ -15,6 +15,8 @@ const Login = ({history}) => {
     setPassword(event.target.value);
   };
 
+
+  
   const handleSubmit = () => {
     if (id === "admin" && password === "admin") history.push('/home');
     else alert("WRONG PASSWORD");

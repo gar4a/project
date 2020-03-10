@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
+import ShoppingCart from './Pages/ShoppingCart';
 import "./index.css";
 import "./bootstrap.min.css"
 import {Route,Switch,BrowserRouter} from 'react-router-dom';
@@ -10,6 +11,7 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 
 const App = () => {
+  
   return (
     <div>
       <BrowserRouter>
