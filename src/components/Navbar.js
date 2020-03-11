@@ -11,11 +11,10 @@ export const Navbar = ({ }) => {
     return (
 <div>
   
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
   <a class="navbar-brand" href="#">My TT Shop</a>
-  <button class="navbar-toggler" type="button" 
-  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -41,7 +40,7 @@ export const Navbar = ({ }) => {
     <div class="dropdown">
   <button class="btn  dropdown-toggle borderbutton espacer" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <span>
-  <i class="fa fa-user-o fa-3x " aria-hidden="true"></i>
+  <i class="fa fa-user-o fa-1x text-white" aria-hidden="true"></i>
 
   </span>
   </button> 
@@ -57,7 +56,7 @@ export const Navbar = ({ }) => {
 <div>
   <button class="btn borderbutton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <span>
-  <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+  <i class="fa fa-shopping-cart fa-1x text-white" aria-hidden="true"></i>
   </span>
   </button> 
 
