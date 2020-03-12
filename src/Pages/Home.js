@@ -1,12 +1,27 @@
-import React, { Component, useState } from 'react';
-import { Navbar } from "../components/Navbar";
+import React from "react";
+import data from "./data";
+import Card from "../components/Card";
+import Carousel from "../components/Carousel";
+import Filter from "../components/Filter";
 
-class Home extends Component {
-    render() {
-        return(
-<div></div>
-            )
-    }
-}
+const Home = props => {
+  return (
+    <div className="container">
+      <Filter />
+      <div className="row">
+        {data.map(el => (
+          <Card
+            image={el.image}
+            DAS={el.DAS}
+            brand={el.brand}
+            title={el.title}
+            price={el.price}
+            colors={el.colors}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Home;
