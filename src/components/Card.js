@@ -4,14 +4,12 @@ const Card = ({ image, title, price, colors, DAS, brand }) => {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
   return (
-    <div className="col-lg-3 col-md-3 mb-3">
+    <div className="col-lg-3 col-md-3 mb-3 mt-4">
       <div className="card h-100">
         <img className="cards center" src={image[selectedColor]} />
         <div className="das">DAS : {DAS} W/Kg</div>
         <div class="card-body">
-          {brand.map(el => (
-            <a className="fonttitle">{brand}</a>
-          ))}
+          <a className="fonttitle">{brand}</a>
           {colors.map(el => (
             <button
               className="bcc1 float-right"

@@ -2,7 +2,7 @@ import React from "react";
 
 const Filter = props => {
   return (
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light mt-4">
       {" "}
       <form className="menucenter">
         {" "}

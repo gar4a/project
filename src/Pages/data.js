@@ -1,3 +1,29 @@
+/* 
+  image : [
+    {
+      color :'red',
+      images:[
+        'image-url1','image-url2', 'image-url3'
+      ]
+    },
+    {
+      color :'blue',
+      images:[
+        'image-url1','image-url2', 'image-url3'
+      ]
+    },
+    {
+      color :'green',
+      images:[
+        'image-url1','image-url2', 'image-url3'
+      ]
+    },
+  ]
+
+  + REMOVE colors field
+
+*/
+
 export default [
   {
     image: {
@@ -11,8 +37,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -26,8 +52,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -41,8 +67,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -56,8 +82,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -71,8 +97,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -86,8 +112,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -101,8 +127,8 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   },
   {
     image: {
@@ -116,7 +142,7 @@ export default [
     title: "iPhone7",
     price: 30,
     colors: ["red", "green", "black"],
-    brand: ["Apple"],
-    DAS: ["1.38"]
+    brand: "Apple",
+    DAS: "1.38"
   }
 ];

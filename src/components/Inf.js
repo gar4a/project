@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Inf = ({ brand, title, capacity, desc }) => {
-  return <div>{}</div>;
+  return <div></div>;
 };
 
 export default Inf;

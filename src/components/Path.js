@@ -1,9 +1,14 @@
 import React from "react";
 
-const Path = props => {
+const Path = () => {
   return (
-    <div class="navigation clearfloat container">
-      <a href="">Retour au catalogue mobile</a>
+    <div>
+      <a href="#">
+        <button class="fa fa-chevron-left"></button>
+        <u>
+          <b> Retour au catalogue mobile</b>
+        </u>
+      </a>
     </div>
   );
 };
