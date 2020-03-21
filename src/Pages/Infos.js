@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-
-import data from "../Pages/data";
+import React, { useState, useEffect } from "react";
+import _ from "lodash";
 import {
   DeviceInfoSubSection,
   Path,
@@ -8,17 +7,39 @@ import {
   DeviceHighlights,
   DevicePriceAndColors
 } from "../components";
-const product = data[0];
+import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { SELECT_PRODUCT } from "../constants/types";
 
 const Infos = () => {
-  const { brand, title, capacity, desc, price, colors, image } = product;
-  const [selectedColor, setSelectedColor] = useState(colors[0]);
+  const params = useParams();
+  const dispatch = useDispatch();
+  const { selectedProduct, productList } = useSelector(state => state.products);
+  useEffect(() => {
+    dispatch({
+      type: SELECT_PRODUCT,
+      payload: productList.find(el => el.id.toString() === params.id)
+    });
+  }, [params]);
+
+  useEffect(() => {
+    if (_.isEmpty(selectedProduct)) return;
+    const colorArray = selectedProduct.images.map(el => el.color);
+    setColors(colorArray);
+    setSelectedColor(colorArray[0]);
+  }, [selectedProduct]);
+
+  const [colors, setColors] = useState([]);
+  const [selectedColor, setSelectedColor] = useState();
+  if (_.isEmpty(selectedProduct) || !colors || !selectedColor) return <div />;
+  const { brand, title, capacity, desc, price, images } = selectedProduct;
+
   return (
     <div class="container">
       <Path />
       <div class="row">
         <ProductImages
-          images={Object.keys(image).map(el => image[el])}
+          images={images.find(el => el.color === selectedColor).images}
           className="col-sm"
         />
         <DeviceHighlights

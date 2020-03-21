@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const ProductImages = ({ images, className }) => {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [selectedImage, setSelectedImage] = useState();
+
+  useEffect(() => {
+    setSelectedImage(images[0]);
+  }, [images]);
 
   return (
     <div class={className}>
       <figure className="mt-4 d-flex justify-content-center border mb-0 ">
-        <img src={selectedImage} className="product-image-selected" />
+        <img src={selectedImage} className="product-image-selected mt-3" />
       </figure>
       <ul class="gallery-choice">
         {images.map(el => (

@@ -21,7 +21,7 @@ const DevicePriceAndColors = ({
       </div>
       <div class="row mt-4">
         <div class="col fonttitle1">Couleurs</div>
-        <div class="col row">
+        <div class="col-7 row">
           {colors.map(el => (
             <button
               className="bcc2"
@@ -34,7 +34,7 @@ const DevicePriceAndColors = ({
       <hr data-content="AND" class="hr-text" />
       <div className="row">
         <div className="col fonttitle1 ">Mémoire</div>
-        <div class="col">
+        <div class="col-7">
           {storageOptions.map(el => (
             <button className="bmem">{el}</button>
           ))}

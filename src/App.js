@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Login from "./Pages/Login";
-import Home from "./Pages/Home";
-import ShoppingCart from "./Pages/ShoppingCart";
+import React from "react";
+
 import "./index.css";
 import "./bootstrap.min.css";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./containers/AppRouter";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
+import configureStore from "./store";
+import { Provider } from "react-redux";
+
+const store = configureStore();
 
 const App = () => {
   return (
-    <div>
+    <Provider store={store}>
       <BrowserRouter>
-        <AppRouter></AppRouter>
+        <AppRouter />
       </BrowserRouter>
-    </div>
+    </Provider>
   );
 };
 

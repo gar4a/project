@@ -19,7 +19,7 @@ const AppRouter = () => {
         <Route component={Login} path="/login" />
         <Route component={Home} path="/home" />
         <Route component={ShoppingCart} path="/cart" />
-        <Route component={Infos} path="/infos" />
+        <Route component={Infos} path="/infos/:id" />
       </Switch>
     </div>
   );
