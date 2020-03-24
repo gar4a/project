@@ -7,7 +7,9 @@ const DevicePriceAndColors = ({
   handleColorChange,
   storageOptions,
   inStock,
-  className
+  className,
+  handleAddToCart,
+  isItemInCart
 }) => {
   return (
     <div className={className}>
@@ -43,9 +45,19 @@ const DevicePriceAndColors = ({
       <hr data-content="AND" class="hr-text" />
       <div className="mt-5">
         <center>
-          <button class="addcart">
-            <i class="fa fa-shopping-cart fa-2x mr-3" aria-hidden="true"></i>
-            <a className="fonttitle1">Ajouter au panier</a>
+          <button
+            class={`addcart ${isItemInCart && "bg-primary"}`}
+            onClick={handleAddToCart}
+          >
+            <i
+              class={`fa ${
+                isItemInCart ? "fa-shopping-cart" : "fa-cart-plus"
+              }  fa-2x mr-3`}
+              aria-hidden="true"
+            ></i>
+            <a className="fonttitle1">
+              {isItemInCart ? "Supprimer du panier" : "Ajouter au panier"}{" "}
+            </a>
           </button>
         </center>
       </div>
@@ -59,7 +71,9 @@ DevicePriceAndColors.propTypes = {
   storageOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleColorChange: PropTypes.func.isRequired,
   inStock: PropTypes.bool.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  handleAddToCart: PropTypes.func.isRequired,
+  isItemInCart: PropTypes.bool.isRequired
 };
 
 export default DevicePriceAndColors;

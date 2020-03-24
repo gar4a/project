@@ -9,18 +9,31 @@ import {
 } from "../components";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { SELECT_PRODUCT } from "../constants/types";
+import {
+  SELECT_PRODUCT,
+  ADD_ITEM_TO_CART,
+  REMOVE_ITEM_FROM_CART
+} from "../constants/types";
 
 const Infos = () => {
   const params = useParams();
   const dispatch = useDispatch();
   const { selectedProduct, productList } = useSelector(state => state.products);
+  const { items: cartItems } = useSelector(state => state.cart);
   useEffect(() => {
     dispatch({
       type: SELECT_PRODUCT,
       payload: productList.find(el => el.id.toString() === params.id)
     });
   }, [params]);
+
+  useEffect(() => {
+    if (_.isEmpty(selectedProduct)) return;
+
+    setIsItemInCart(
+      typeof cartItems.find(el => el.id === selectedProduct.id) === "object"
+    );
+  }, [selectedProduct, cartItems]);
 
   useEffect(() => {
     if (_.isEmpty(selectedProduct)) return;
@@ -31,8 +44,16 @@ const Infos = () => {
 
   const [colors, setColors] = useState([]);
   const [selectedColor, setSelectedColor] = useState();
+  const [isItemInCart, setIsItemInCart] = useState(false);
   if (_.isEmpty(selectedProduct) || !colors || !selectedColor) return <div />;
   const { brand, title, capacity, desc, price, images } = selectedProduct;
+
+  const onAddToCart = () => {
+    dispatch({
+      type: isItemInCart ? REMOVE_ITEM_FROM_CART : ADD_ITEM_TO_CART,
+      payload: selectedProduct
+    });
+  };
 
   return (
     <div class="container">
@@ -55,6 +76,8 @@ const Infos = () => {
           handleColorChange={setSelectedColor}
           className="col-sm mt-4"
           inStock
+          handleAddToCart={onAddToCart}
+          isItemInCart={isItemInCart}
         />
       </div>
       <div className="mt-5">
