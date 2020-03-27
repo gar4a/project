@@ -1,9 +1,8 @@
-import React from "react";
-import Navbar from "../components/Cart/Navbar";
-import Product from "../components/Cart/Product";
-import { Footer } from "../components/Cart";
+import React, { useState, useEffect } from "react";
+import _ from "lodash";
+import { Navbar, Product, Footer } from "../components/Cart/";
 
-export const ShoppingCart = () => {
+const ShoppingCart = () => {
   return (
     <div className="container mt-5 ">
       <Navbar />
