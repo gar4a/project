@@ -12,9 +12,9 @@ export const Navbar = ({}) => {
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <Link class="navbar-brand" to="home">
             My TT Shop
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -30,32 +30,24 @@ export const Navbar = ({}) => {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item  active">
-                <a class="nav-link navbarcolor" href="#">
-                  <span>
-                    <i class="fa fa-apple" aria-hidden="true"></i> iPhone
-                  </span>
-                </a>
+                <Link class="nav-link navbarcolor" to="iPhone">
+                  <i class="fa fa-apple" aria-hidden="true"></i> iPhone
+                </Link>
               </li>
               <li class="nav-item active espacel">
-                <a class="nav-link navbarcolor" href="#">
-                  <span>
-                    <i class="fa fa-android" aria-hidden="true"></i> Samsung
-                  </span>
-                </a>
+                <Link class="nav-link navbarcolor" to="Samsung">
+                  <i class="fa fa-android" aria-hidden="true"></i> Samsung
+                </Link>
               </li>
               <li class="nav-item active espacel">
-                <a class="nav-link navbarcolor" href="#">
-                  <span>
-                    <i class="fa fa-windows" aria-hidden="true"></i> Nokia
-                  </span>
-                </a>
+                <Link class="nav-link navbarcolor" to="Nokia">
+                  <i class="fa fa-windows" aria-hidden="true"></i> Nokia
+                </Link>
               </li>
               <li class="nav-item active espacel">
-                <a class="nav-link navbarcolor" href="#">
-                  <span>
-                    <i class="fa fa-android" aria-hidden="true"></i> Huawei
-                  </span>
-                </a>
+                <Link class="nav-link navbarcolor" to="Huawei">
+                  <i class="fa fa-android" aria-hidden="true"></i> Huawei
+                </Link>
               </li>
             </ul>
             <div class="dropdown">
@@ -79,15 +71,15 @@ export const Navbar = ({}) => {
                 class="dropdown-menu listRight"
                 aria-labelledby="dropdownMenuButton"
               >
-                <a class="dropdown-item" href="#">
+                <Link class="dropdown-item" to="Profil">
                   Profil
-                </a>
-                <a class="dropdown-item" href="#">
+                </Link>
+                <Link class="dropdown-item" to="Historique">
                   Historique Commandes
-                </a>
-                <a class="dropdown-item" href="#">
+                </Link>
+                <Link class="dropdown-item" to="login">
                   Logout
-                </a>
+                </Link>
               </div>
             </div>
             <div>
