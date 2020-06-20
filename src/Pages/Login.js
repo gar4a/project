@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
 import logo from "../images/bg-login.png";
 import { TextInput } from "../components/TextInput";
+import { signin } from "../actions/auth";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
-const Login = ({ history }) => {
+const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleIdChange = event => {
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const handleIdChange = (event) => {
     setId(event.target.value);
   };
-  const handlePasswordChange = event => {
+  const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = () => {
-    if (id === "admin" && password === "admin") history.push("/home");
-    else alert("WRONG PASSWORD");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(signin(id, password, history));
   };
 
   return (
