@@ -1,17 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const DeviceHighlights = ({ brand, title, className, content }) => {
+const DeviceHighlights = ({ brand, title, color, className, content }) => {
   return (
     <div class={className}>
       <div className="fonttitle">
         <h4 className="font-weight-bold">{brand}</h4>
       </div>
       <div className="fonttitle1">
-        <h3 className="font-weight-bold">{title}</h3>
+        <h3 className="font-weight-bold fonttitle1">
+          {title} {color}
+        </h3>
       </div>
+
       <div className="mt-5">
-        {content.map(el => (
+        {content.map((el) => (
           <>
             <h6 class=" text-uppercase">{el}</h6>
             <hr data-content="AND" class="hr-text" />
@@ -42,7 +45,7 @@ DeviceHighlights.propTypes = {
   brand: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
-  content: PropTypes.arrayOf(PropTypes.string).isRequired
+  content: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default DeviceHighlights;

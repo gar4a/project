@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Card from "../components/Card";
-
+import { getProducts } from "../actions/products";
 import Filter from "../components/Filter";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
-  const { productList } = useSelector(state => state.products);
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+  const { productList } = useSelector((state) => state.products);
   return (
     <div className="container">
       <Filter />
       <div className="row">
-        {productList.map(el => (
+        {productList.map((el) => (
           <Card {...el} />
         ))}
       </div>
     </div>
   );
 };
-
 export default Home;

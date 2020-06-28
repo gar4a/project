@@ -1,31 +1,36 @@
 import React, { useState } from "react";
 import Quantity from "./Quantity";
+import { connect } from "react-redux";
 
-const Product = () => {
+const Product = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
-  const [product, setProduct] = useState([]);
-  const [productDesc, setProductDesc] = useState([]);
-  const [productImg, setproductImg] = useState([]);
-  const [ProductPrice, setProductPrice] = useState([]);
+  const { title, price, brand, images, description } = product;
+  const [selectedProduct, setSelectedProduct] = useState();
+
   return (
     <div>
-      <div class="card-body fonttitle">
+      <div class="card-body">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-2 text-center">
-            <img
-              class="img-responsive"
-              src="http://placehold.it/120x80"
-              alt="prewiew"
-              width="120"
-              height="80"
-            />
+            <img class="img-responsive" src={images} alt="prewiew" />
           </div>
           <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-            <h4 class="product-name">
-              <strong>Product Name</strong>
+            <div className="fonttitle">
+              <h4 className="font-weight-bold">{brand}</h4>
+            </div>
+            <h4 class="product-name fonttitle1">
+              <strong>{title}</strong>
             </h4>
             <h4>
-              <small>Descirption du Produit</small>
+              <small>
+                {" "}
+                {description.map((el) => (
+                  <>
+                    <h6 class=" text-uppercase">{el}</h6>
+                    <hr data-content="AND" class="hr-text" />
+                  </>
+                ))}
+              </small>
             </h4>
           </div>
           <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row align-items-center">

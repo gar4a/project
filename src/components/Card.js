@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Card = product => {
-  const { images, title, price, DAS, brand, id } = product;
-  const colors = images.map(el => el.color);
+const Card = (product) => {
+  const { images, title, price, das, brand, id } = product;
+  const colors = images.map((el) => el.color);
 
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
@@ -12,12 +12,12 @@ const Card = product => {
       <div className="card h-100">
         <img
           className="cards center"
-          src={images.find(el => el.color === selectedColor).images[0]}
+          src={images.find((el) => el.color === selectedColor).images[0]}
         />
-        <div className="das">DAS : {DAS} W/Kg</div>
+        <div className="das">DAS : {das} W/Kg</div>
         <div class="card-body">
           <a className="fonttitle">{brand}</a>
-          {colors.map(el => (
+          {colors.map((el) => (
             <button
               className="bcc1 float-right"
               onClick={() => setSelectedColor(el)}
