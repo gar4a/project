@@ -9,6 +9,7 @@ import {
 export const signin = (username, password, history) => async (dispatch) => {
   try {
     const response = await api.post("/Clients/login", { username, password });
+    localStorage.setItem("token", response.data.id);
     dispatch({ type: SIGNIN_SUCCESS, payload: response.data });
     history.push("/home");
   } catch (error) {

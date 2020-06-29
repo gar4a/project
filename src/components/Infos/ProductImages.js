@@ -5,7 +5,7 @@ const ProductImages = ({ images, className }) => {
   const [selectedImage, setSelectedImage] = useState();
 
   useEffect(() => {
-    setSelectedImage(images[0]);
+    if (images) setSelectedImage(images[0]);
   }, [images]);
 
   return (
@@ -14,7 +14,7 @@ const ProductImages = ({ images, className }) => {
         <img src={selectedImage} className="product-image-selected mt-3" />
       </figure>
       <ul class="gallery-choice">
-        {images.map(el => (
+        {images?.map((el) => (
           <div
             className="product-image-thumbnail-container"
             onMouseMove={() => setSelectedImage(el)}
@@ -29,7 +29,7 @@ const ProductImages = ({ images, className }) => {
 
 ProductImages.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default ProductImages;

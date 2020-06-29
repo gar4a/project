@@ -8,6 +8,7 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import Card from "../components/Card";
 import Carousel from "../components/Carousel";
+import PrivateRoute from "../components/PrivateRoute";
 
 const AppRouter = () => {
   const location = useLocation();
@@ -17,9 +18,9 @@ const AppRouter = () => {
       {location.pathname !== "/login" && <Carousel />}
       <Switch>
         <Route component={Login} path="/login" />
-        <Route component={Home} path="/home" />
-        <Route component={ShoppingCart} path="/cart" />
-        <Route component={Infos} path="/infos/:id" />
+        <PrivateRoute component={Home} path="/home" />
+        <PrivateRoute component={ShoppingCart} path="/cart" />
+        <PrivateRoute component={Infos} path="/infos/:id" />
       </Switch>
     </div>
   );

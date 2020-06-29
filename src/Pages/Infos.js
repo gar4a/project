@@ -82,7 +82,9 @@ const Infos = () => {
       <Path />
       <div class="row">
         <ProductImages
-          images={images.find((el) => el.color === selectedColor).images}
+          images={
+            images && images.find((el) => el.color === selectedColor)?.images
+          }
           className="col-sm"
         />
         <DeviceHighlights

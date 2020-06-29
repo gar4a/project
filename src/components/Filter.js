@@ -1,13 +1,13 @@
 import React from "react";
 
-const Filter = props => {
+const Filter = (props) => {
   return (
     <nav class="navbar navbar-light bg-light mt-4">
       {" "}
       <form className="menucenter">
         {" "}
         <button class="btn bg-dark text-white" type="button">
-          Main button
+          Smartphone
         </button>{" "}
         <button class="btn bg-dark text-white" type="button">
           Main button
