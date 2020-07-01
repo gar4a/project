@@ -19,16 +19,20 @@ export const signin = (username, password, history) => async (dispatch) => {
 export const signout = (history) => async (dispatch, getState) => {
   try {
     const state = getState();
-    const token = state.user.user.id;
+    console.log(state.user);
+    const token = localStorage.getItem("token");
+
     const config = {
       headers: {
         Authorization: token,
       },
     };
     await api.post("/Clients/logout", undefined, config);
+    localStorage.removeItem("token");
     dispatch({ type: LOGOUT_SUCCESS });
     history.push("/login");
   } catch (error) {
+    console.log(error);
     dispatch({ type: LOGOUT_FAILURE, error });
   }
 };
