@@ -11,10 +11,11 @@ const Card = (product) => {
     <Link className="col-lg-3 col-md-3 mb-3 mt-4" to={`/infos/${id}`}>
       <div className="card h-100">
         <img
+          style={{ minHeight: "53%" }}
           className="cards center"
           src={images.find((el) => el.color === selectedColor).images[0]}
         />
-        <div className="das">DAS : {das} W/Kg</div>
+        {das != 0 && <div className="das">DAS : {das} W/Kg</div>}
         <div class="card-body">
           <a className="fonttitle">{brand}</a>
           {colors.map((el) => (

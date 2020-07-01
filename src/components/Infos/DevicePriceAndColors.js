@@ -9,7 +9,7 @@ const DevicePriceAndColors = ({
   inStock,
   className,
   handleAddToCart,
-  isItemInCart
+  isItemInCart,
 }) => {
   return (
     <div className={className}>
@@ -24,7 +24,7 @@ const DevicePriceAndColors = ({
       <div class="row mt-4">
         <div class="col fonttitle1">Couleurs</div>
         <div class="col-7 row">
-          {colors.map(el => (
+          {colors.map((el) => (
             <button
               className="bcc2"
               onClick={() => handleColorChange(el)}
@@ -34,15 +34,21 @@ const DevicePriceAndColors = ({
         </div>
       </div>
       <hr data-content="AND" class="hr-text" />
-      <div className="row">
-        <div className="col fonttitle1 ">Mémoire</div>
-        <div class="col-7">
-          {storageOptions.map(el => (
-            <button className="bmem">{el}</button>
-          ))}
+      {storageOptions[0] && (
+        <div>
+          <div className="row">
+            <div className="col fonttitle1 ">Mémoire</div>
+            <div class="col-7">
+              {storageOptions.map((el) => (
+                <button className="bmem">{el}</button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <hr data-content="AND" class="hr-text" />
+          </div>
         </div>
-      </div>
-      <hr data-content="AND" class="hr-text" />
+      )}
       <div className="mt-5">
         <center>
           <button
@@ -73,7 +79,7 @@ DevicePriceAndColors.propTypes = {
   inStock: PropTypes.bool.isRequired,
   className: PropTypes.string,
   handleAddToCart: PropTypes.func.isRequired,
-  isItemInCart: PropTypes.bool.isRequired
+  isItemInCart: PropTypes.bool.isRequired,
 };
 
 export default DevicePriceAndColors;

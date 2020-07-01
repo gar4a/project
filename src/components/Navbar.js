@@ -30,23 +30,24 @@ export const Navbar = ({}) => {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item  active">
-                <Link class="nav-link navbarcolor" to="/iPhone">
-                  <i class="fa fa-apple" aria-hidden="true"></i> iPhone
+                <Link class="nav-link navbarcolor" to="/Smartphones">
+                  <i class="fa fa-mobile" aria-hidden="true"></i> Smartphones
                 </Link>
               </li>
               <li class="nav-item active espacel">
-                <Link class="nav-link navbarcolor" to="/Samsung">
-                  <i class="fa fa-android" aria-hidden="true"></i> Samsung
+                <Link class="nav-link navbarcolor" to="/PetitsPrix">
+                  <i class="fa fa-dollar" aria-hidden="true"></i> Petits Prix
                 </Link>
               </li>
               <li class="nav-item active espacel">
-                <Link class="nav-link navbarcolor" to="/Nokia">
-                  <i class="fa fa-windows" aria-hidden="true"></i> Nokia
+                <Link class="nav-link navbarcolor" to="/BonsPlans">
+                  <i class="fa fa-gift" aria-hidden="true"></i> Bons Plans
                 </Link>
               </li>
               <li class="nav-item active espacel">
-                <Link class="nav-link navbarcolor" to="/Huawei">
-                  <i class="fa fa-android" aria-hidden="true"></i> Huawei
+                <Link class="nav-link navbarcolor" to="/Accessoires">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>{" "}
+                  Accessoires
                 </Link>
               </li>
             </ul>

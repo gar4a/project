@@ -7,19 +7,19 @@ const Filter = (props) => {
       <form className="menucenter">
         {" "}
         <button class="btn bg-dark text-white" type="button">
-          Smartphone
+          Apple
         </button>{" "}
         <button class="btn bg-dark text-white" type="button">
-          Main button
+          Samsung
         </button>{" "}
         <button class="btn bg-dark text-white" type="button">
-          Main button
+          Huawei
         </button>{" "}
         <button class="btn bg-dark text-white" type="button">
-          Main button
+          Oppo
         </button>{" "}
         <button class="btn bg-dark text-white" type="button">
-          Main button
+          Sony
         </button>{" "}
       </form>{" "}
     </nav>
