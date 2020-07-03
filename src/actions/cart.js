@@ -6,11 +6,17 @@ import {
   DECREMENT_CARD_ITEM,
 } from "../constants/types/cart";
 
-export const addCart = () => async (dispatch) => {
-  try {
-    const response = await api.get("/Articles");
-    dispatch({ type: FETCH_PRODUCTS_SUCCESS, payload: response.data });
-  } catch (error) {
-    dispatch({ type: FETCH_PRODUCTS_FAILURE, error });
-  }
+// export const addCart = () => async (dispatch) => {
+//   try {
+//     const response = await api.get("/Articles");
+//     dispatch({ type: FETCH_PRODUCTS_SUCCESS, payload: response.data });
+//   } catch (error) {
+//     dispatch({ type: FETCH_PRODUCTS_FAILURE, error });
+//   }
+// };
+export const removeCart = (payload) => {
+  return {
+    type: REMOVE_ITEM_FROM_CART,
+    payload,
+  };
 };

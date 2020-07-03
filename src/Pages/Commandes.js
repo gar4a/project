@@ -1,5 +1,6 @@
 import React from "react";
 
-export const Commandes = () => {
+const Commandes = () => {
   return <div></div>;
 };
+export default Commandes;

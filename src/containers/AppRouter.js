@@ -3,6 +3,7 @@ import Login from "../Pages/Login";
 import Home from "../Pages/Home";
 import ShoppingCart from "../Pages/ShoppingCart";
 import Infos from "../Pages/Infos";
+import Commandes from "../Pages/Commandes";
 
 import { Route, Switch, useLocation } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <PrivateRoute component={Home} path="/home" />
         <PrivateRoute component={ShoppingCart} path="/cart" />
         <PrivateRoute component={Infos} path="/infos/:id" />
+        <PrivateRoute component={Commandes} path="/commandes/" />
       </Switch>
     </div>
   );

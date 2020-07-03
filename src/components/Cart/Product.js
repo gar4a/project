@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import Quantity from "./Quantity";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
+import { removeCart } from "../../actions/cart";
 
 const Product = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
-  const { title, price, brand, images, description } = product;
+  const { title, price, brand, images, description, id } = product;
   const [selectedProduct, setSelectedProduct] = useState();
-
+  const dispatch = useDispatch();
+  const handleDelete = () => {
+    dispatch(removeCart({ price, id }));
+  };
   return (
     <div>
       <div class="card-body">
@@ -37,7 +41,7 @@ const Product = ({ product }) => {
             <div class="col-3 col-sm-3 col-md-6 text-md-right">
               <h6>
                 <strong className="d-flex justify-content-center fonttitle1">
-                  {quantity * 25} <span class="text-muted"> d.t x</span>
+                  {quantity * price} <span class="text-muted"> d.t x</span>
                 </strong>
               </h6>
             </div>
@@ -47,7 +51,11 @@ const Product = ({ product }) => {
             </div>
 
             <div class="col-2 col-sm-2 col-md-2 text-right">
-              <button type="button" class="btn btn-outline-danger btn-xs">
+              <button
+                type="button"
+                class="btn btn-outline-danger btn-xs"
+                onClick={handleDelete}
+              >
                 <i class="fa fa-trash" aria-hidden="true"></i>
               </button>
             </div>

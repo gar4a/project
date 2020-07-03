@@ -14,7 +14,7 @@ const ShoppingCart = () => {
         ))}
       </div>
       <div class="card-footer">
-        <Footer />
+        <Footer product={cart.items} />
       </div>
     </div>
   );
