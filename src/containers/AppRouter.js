@@ -7,6 +7,7 @@ import Commandes from "../Pages/Commandes";
 
 import { Route, Switch, useLocation } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Carousel from "../components/Carousel";
 import PrivateRoute from "../components/PrivateRoute";
@@ -24,6 +25,7 @@ const AppRouter = () => {
         <PrivateRoute component={Infos} path="/infos/:id" />
         <PrivateRoute component={Commandes} path="/commandes/" />
       </Switch>
+      {location.pathname !== "/login" && <Footer />}
     </div>
   );
 };

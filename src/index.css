@@ -1,3 +1,15 @@
+.footerlink {
+  font-size: 11px !important;
+}
+.footertitle {
+  font-size: 14px;
+}
+.hrfooter {
+  border: none;
+  border-left: 1px solid hsla(200, 10%, 50%, 100);
+  height: 17vh;
+  width: 1px;
+}
 .shopbtn {
   border-radius: 25px;
   font-family: Poppins-regular;
@@ -680,7 +692,7 @@ iframe {
   width: 560px;
   min-height: 100vh;
   display: block;
-  background-color: #16192a;
+  background-color: #53514d;
   padding: 173px 55px 55px 55px;
 }
 
@@ -896,7 +908,7 @@ input.input100 {
   width: 100%;
   height: 50px;
   border-radius: 10px;
-  background: #de2554;
+  background: #8d0654;
 
   font-family: Montserrat-Bold;
   font-size: 12px;
