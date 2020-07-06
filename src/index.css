@@ -594,7 +594,7 @@ iframe {
   font-family: Montserrat-Regular;
   font-size: 13px;
   line-height: 1.4;
-  color: #ffffff;
+  color: #000000;
 }
 
 .txt2 {
@@ -692,7 +692,7 @@ iframe {
   width: 560px;
   min-height: 100vh;
   display: block;
-  background-color: #53514d;
+  background-color: #0000;
   padding: 173px 55px 55px 55px;
 }
 
@@ -728,7 +728,7 @@ iframe {
 .label-input100 {
   font-family: Montserrat-Regular;
   font-size: 18px;
-  color: #ffffff;
+  color: #000000;
   line-height: 1.2;
 
   display: block;
