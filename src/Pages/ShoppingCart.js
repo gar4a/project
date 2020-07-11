@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart);
   return (
-    <div className="container mt-5 ">
+    <div className="container mt-5">
       <Navbar />
       <div class="card shopping-cart">
         {cart.items.map((el) => (

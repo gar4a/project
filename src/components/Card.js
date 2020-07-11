@@ -9,10 +9,10 @@ const Card = (product) => {
 
   return (
     <Link className="col-lg-3 col-md-3 mb-3 mt-4" to={`/infos/${id}`}>
-      <div className="card h-100">
+      <div className="card h-100 responsive">
         <img
           style={{ minHeight: "53%" }}
-          className="cards center"
+          className="cards center "
           src={images.find((el) => el.color === selectedColor).images[0]}
         />
         {das != 0 && <div className="das">DAS : {das} W/Kg</div>}

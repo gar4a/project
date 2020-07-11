@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import ShoppingCart from "../Pages/ShoppingCart";
 import Infos from "../Pages/Infos";
 import Commandes from "../Pages/Commande/Commandes";
+import Profil from "../Pages/Profil/Profil";
 
 import { Route, Switch, useLocation } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
@@ -23,6 +24,7 @@ const AppRouter = () => {
         <PrivateRoute component={ShoppingCart} path="/cart" />
         <PrivateRoute component={Infos} path="/infos/:id" />
         <PrivateRoute component={Commandes} path="/commandes/" />
+        <PrivateRoute component={Profil} path="/Profil/" />
       </Switch>
       {location.pathname !== "/login" && <Footer />}
     </div>

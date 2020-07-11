@@ -1,9 +1,7 @@
 import React from "react";
-import LogoTT from "../images/LogoTT.jpg";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import Popper from "popper.js";
 import { Link } from "react-router-dom";
 import { signout } from "../actions/auth";
 import { useHistory } from "react-router-dom";
@@ -18,7 +16,10 @@ export const Navbar = ({}) => {
   };
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light"
+        style={{ position: "fixed", zIndex: 6, width: "100vw" }}
+      >
         <div class="container">
           <Link class="navbar-brand" to="/home">
             My TT Shop
@@ -51,53 +52,30 @@ export const Navbar = ({}) => {
                 </Link>
               </li>
             </ul>
-            <div class="dropdown">
-              <button
-                class="btn  dropdown-toggle borderbutton espacer"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-              >
-                <span>
-                  <i
-                    class="fa fa-user-o fa-1x text-black"
-                    aria-hidden="true"
-                  ></i>
-                </span>
-              </button>
-
-              <div
-                class="dropdown-menu listRight"
-                aria-labelledby="dropdownMenuButton"
-              >
-                <Link class="dropdown-item" to="/Profil">
-                  Profil
-                </Link>
-                <Link class="dropdown-item" to="/Historique">
-                  Historique Commandes
-                </Link>
-                <a
-                  class="dropdown-item"
-                  style={{ cursor: "pointer" }}
-                  onClick={handleSubmit}
-                >
-                  Logout
-                </a>
-              </div>
+            <div class="mr-4">
+              <Link to="/Profil">
+                <i class="fa fa-user-o fa-1x text-black" aria-hidden="true"></i>
+              </Link>
             </div>
             <div>
-              <div>
-                <Link
-                  class="btn borderbutton"
-                  type="button"
-                  id="dropdownMenuButton"
-                  to="/cart"
-                >
-                  <span>
-                    <a class="fa fa-shopping-cart fa-1x text-black"></a>
-                  </span>
-                </Link>
-              </div>
+              <Link
+                class="btn borderbutton mr-4"
+                type="button"
+                id="dropdownMenuButton"
+                to="/cart"
+              >
+                <span>
+                  <a class="fa fa-shopping-cart fa-1x text-black"></a>
+                </span>
+              </Link>
+            </div>
+            <div class="mr-4">
+              <button onClick={handleSubmit}>
+                <i
+                  class="fa fa-sign-out fa-1x text-black"
+                  aria-hidden="true"
+                ></i>
+              </button>
             </div>
           </div>
         </div>

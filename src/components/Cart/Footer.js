@@ -1,5 +1,4 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 const totalPrice = (product) => {
@@ -16,7 +15,11 @@ const Footer = ({ product }) => {
         <span>
           Total price: <b>{totalPrice(product)} dt</b>
         </span>
-        <Link to="/commandes" class="btn btn-success float-right ml-5 ">
+        <Link
+          to="/commandes"
+          class="text-white bmem fonttitle1 float-right ml-5 "
+          style={{ background: "#de2554" }}
+        >
           Commander
         </Link>
       </div>

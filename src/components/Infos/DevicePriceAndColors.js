@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const DevicePriceAndColors = ({
   colors,
@@ -65,6 +66,11 @@ const DevicePriceAndColors = ({
               {isItemInCart ? "Supprimer du panier" : "Ajouter au panier"}{" "}
             </a>
           </button>
+          <Link to="/cart">
+            <button class="addcart fa fa-shopping-cart fa-2x text-black bg-primary">
+              <a class="fonttitle1"> Accéder au Panier</a>
+            </button>
+          </Link>
         </center>
       </div>
     </div>

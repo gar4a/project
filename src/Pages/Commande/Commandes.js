@@ -14,7 +14,7 @@ const Commandes = () => {
       <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
           <div class="col-xl-5 col-lg-6 col-md-7">
-            <div class="card b-0">
+            <div class="card-com b-0">
               <h3 class="heading">Validation de la commande</h3>
               <ul id="progressbar" class="text-center">
                 <li class="active step0" id="step1"></li>
@@ -55,6 +55,7 @@ const Commandes = () => {
                   <button
                     id="next1"
                     class="btn-block btn-primary mt-3 mb-1 next"
+                    style={{ background: "#de2554" }}
                   >
                     IMPRIMER LA FACTURE
                   </button>
