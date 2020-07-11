@@ -3,12 +3,11 @@ import Login from "../Pages/Login";
 import Home from "../Pages/Home";
 import ShoppingCart from "../Pages/ShoppingCart";
 import Infos from "../Pages/Infos";
-import Commandes from "../Pages/Commandes";
+import Commandes from "../Pages/Commande/Commandes";
 
 import { Route, Switch, useLocation } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
-import Card from "../components/Card";
 import Carousel from "../components/Carousel";
 import PrivateRoute from "../components/PrivateRoute";
 

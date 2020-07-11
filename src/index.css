@@ -751,7 +751,7 @@ iframe {
   background: transparent;
   font-family: Montserrat-Regular;
   font-size: 22px;
-  color: #ffffff;
+  color: #000000;
   line-height: 1.2;
   text-align: center;
 }
@@ -812,10 +812,6 @@ input.input100 {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-}
-
-.input100:focus {
-  height: 48px;
 }
 
 .input100:focus + .focus-input100 + .label-input100 {

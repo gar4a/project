@@ -1,6 +1,7 @@
 import React from "react";
 
-const Commandes = () => {
+const Profil = () => {
   return <div></div>;
 };
-export default Commandes;
+
+export default Profil;

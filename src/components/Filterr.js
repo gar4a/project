@@ -33,6 +33,9 @@ export default function RangeSlider() {
         aria-labelledby="range-slider"
         getAriaValueText={valuetext}
       />
+      <form class="range-field w-75">
+        <input class="border-0" type="range" min="0" max="100" />
+      </form>
     </div>
   );
 }
