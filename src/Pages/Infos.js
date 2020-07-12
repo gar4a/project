@@ -57,6 +57,19 @@ const Infos = () => {
     price,
     images,
     id,
+    ecran,
+    stock,
+    perfor,
+    audio,
+    batt,
+    affichage,
+    se,
+    photo,
+    reseau,
+    connec,
+    capteur,
+    poids,
+    divers,
   } = selectedProduct;
 
   const onAddToCart = () => {
@@ -109,71 +122,49 @@ const Infos = () => {
         <p class="subtitle fancy fonttitle1 mb-5">
           <span>Fiche Technique</span>
         </p>
+        <DeviceInfoSubSection color="#de2554" title="ÉCRAN" content={ecran} />
         <DeviceInfoSubSection
-          color="orange"
-          title="CARACTÉRISTIQUES TECHNIQUES"
-          content={[
-            "This is the first item",
-            "This is the second item",
-            "This is the third item",
-          ]}
+          color="#007BFF"
+          title="STOCKAGE"
+          content={stock}
         />
         <DeviceInfoSubSection
-          color="blue"
+          color="#de2554"
+          title="PERFORMANCE"
+          content={perfor}
+        />
+        <DeviceInfoSubSection color="#007BFF" title="AUDIO" content={audio} />
+        <DeviceInfoSubSection color="#de2554" title="BATTERIE" content={batt} />
+        <DeviceInfoSubSection
+          color="#007BFF"
           title="AFFICHAGE"
-          content={[
-            "This is the first item",
-            "This is the second item",
-            "This is the third item",
-          ]}
+          content={affichage}
         />
         <DeviceInfoSubSection
-          color="black"
-          title="ENTRÉES & SORTIES"
-          content={[
-            "This is the first item",
-            "This is the second item",
-            "This is the third item",
-          ]}
+          color="#de2554"
+          title="APPAREIL PHOTO"
+          content={photo}
+        />
+        <DeviceInfoSubSection color="#007BFF" title="RÉSEAU" content={reseau} />
+        <DeviceInfoSubSection
+          color="#de2554"
+          title="CONNECTIVITÉ"
+          content={connec}
         />
         <DeviceInfoSubSection
-          color="yellow"
-          title="MULTIMÉDIA"
-          content={[
-            "This is the first item",
-            "This is the second item",
-            "This is the third item",
-          ]}
+          color="#007BFF"
+          title="CAPTEURS"
+          content={capteur}
         />
         <DeviceInfoSubSection
-          color="red"
-          title="COMMUNICATION"
-          content={[
-            "This is the first item",
-            "This is the second item",
-            "This is the third item",
-          ]}
+          color="#de2554"
+          title="POIDS ET DIMENSIONS"
+          content={poids}
         />
         <DeviceInfoSubSection
-          color="pink"
-          title="ALIMENTATION"
-          content={[
-            "This is the second item",
-            "This is the first item",
-            "This is the first item",
-            "This is the third item",
-          ]}
-        />
-        <DeviceInfoSubSection
-          color="lightblue"
-          title="DIMENSIONS"
-          content={[
-            "This is the first item",
-            "This is the second item",
-            "This is the first item",
-            "This is the second item",
-            "This is the third item",
-          ]}
+          color="#007BFF"
+          title="DIVERS ET DIMENSIONS"
+          content={divers}
         />
       </div>
     </div>
