@@ -3,51 +3,37 @@ import React from "react";
 const StepThree = () => {
   return (
     <div class="form-card">
-      <h5 class="sub-heading mb-4">Company Details</h5>
-      <label class="text-danger mb-3">* Required</label>
-      <div class="form-group">
-        <label class="form-control-label">Company Name * :</label>
+      <h5 class="sub-heading mb-4">Choisissez le mode de paiement</h5>
+      <div class="custom-control custom-radio mt-5 mb-5">
         <input
-          type="text"
-          id="cname"
-          name="cname"
-          placeholder=""
-          class="form-control"
-          onblur="validate2(1)"
+          type="radio"
+          class="custom-control-input"
+          id="defaultGroupExample1"
+          name="groupOfDefaultRadios"
         />
+
+        <label
+          class="custom-control-label fonttitle1"
+          for="defaultGroupExample1"
+        >
+          Espèce
+        </label>
       </div>
-      <div class="form-group">
-        <label class="form-control-label">Zip Code * :</label>
+      <hr data-content="AND" class="hr-text" />
+      <div class="custom-control custom-radio mt-5 mb-5">
         <input
-          type="text"
-          id="zip"
-          name="zip"
-          placeholder=""
-          class="form-control"
-          onblur="validate2(2)"
+          type="radio"
+          class="custom-control-input"
+          id="defaultGroupExample2"
+          name="groupOfDefaultRadios"
+          checked
         />
-      </div>
-      <div class="form-group">
-        <label class="form-control-label">State * :</label>
-        <input
-          type="text"
-          id="state"
-          name="state"
-          placeholder=""
-          class="form-control"
-          onblur="validate2(3)"
-        />
-      </div>
-      <div class="form-group">
-        <label class="form-control-label">City * :</label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          placeholder=""
-          class="form-control"
-          onblur="validate2(4)"
-        />
+        <label
+          class="custom-control-label fonttitle1"
+          for="defaultGroupExample2"
+        >
+          Chèque
+        </label>
       </div>
     </div>
   );

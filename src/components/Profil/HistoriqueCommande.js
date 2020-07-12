@@ -2,34 +2,30 @@ import React from "react";
 
 const HistoriqueCommande = () => {
   return (
-    <div>
-      <table class="table table-striped table-dark">
+    <div class="container">
+      <table class="table">
         <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+          <tr className="text-black">
+            <th>#Ref</th>
+            <th>Date de création</th>
+            <th>Statut</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+          <tr class="table-success">
+            <td>21568388</td>
+            <td>15/06/2018</td>
+            <td>Validée</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+          <tr class="table-success">
+            <td>21469834</td>
+            <td>11/12/2019</td>
+            <td>Validée</td>
           </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+          <tr class="table-danger">
+            <td>21469720</td>
+            <td>30/11/2019</td>
+            <td>Expirée</td>
           </tr>
         </tbody>
       </table>

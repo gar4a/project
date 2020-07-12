@@ -5,8 +5,8 @@ import Product from "../Cart/Product";
 const StepOne = () => {
   const cart = useSelector((state) => state.cart);
   return (
-    <div class="form-card">
-      <h5 class="sub-heading">Votre panier contient :</h5>
+    <div class="form-card mt-5 mb-5">
+      <h1 class="sub-heading fonttitle1">Votre panier contient :</h1>
       {cart.items.map((el) => (
         <div className="title">
           <hr data-content="AND" class="hr-text" />

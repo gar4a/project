@@ -53,17 +53,12 @@ export const Navbar = ({}) => {
               </li>
             </ul>
             <div class="mr-4">
-              <Link to="/Profil">
-                <i class="fa fa-user-o fa-1x text-black" aria-hidden="true"></i>
+              <Link to="/Profil" type="button">
+                <a class="fa fa-user-o fa-1x text-black"></a>
               </Link>
             </div>
             <div>
-              <Link
-                class="btn borderbutton mr-4"
-                type="button"
-                id="dropdownMenuButton"
-                to="/cart"
-              >
+              <Link class="btn borderbutton mr-4" type="button" to="/cart">
                 <span>
                   <a class="fa fa-shopping-cart fa-1x text-black"></a>
                 </span>

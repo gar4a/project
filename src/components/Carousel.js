@@ -1,6 +1,6 @@
 import React from "react";
 
-const Carousel = props => {
+const Carousel = (props) => {
   return (
     <div
       id="carouselExampleIndicators"
