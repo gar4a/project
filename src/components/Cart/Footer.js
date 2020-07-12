@@ -12,7 +12,7 @@ const Footer = ({ product }) => {
   return (
     <div className="d-flex justify-content-end ">
       <div className="align-items-center d-flex">
-        <span>
+        <span className="fonttitle1">
           Total price: <b>{totalPrice(product)} dt</b>
         </span>
         <Link
